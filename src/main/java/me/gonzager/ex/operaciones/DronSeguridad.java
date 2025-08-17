@@ -1,11 +1,9 @@
 package me.gonzager.ex.operaciones;
 
-import java.util.List;
-
 public class DronSeguridad extends Drones{
 
-    public DronSeguridad(Double autonomia, Integer nivelProcesamiento, Mision mision, List<Sensor> sensores) {
-        super(autonomia, nivelProcesamiento, mision, sensores);
+    public DronSeguridad(Double autonomia, Integer nivelProcesamiento, Mision mision) {
+        super(autonomia, nivelProcesamiento, mision);
     }
 
     @Override

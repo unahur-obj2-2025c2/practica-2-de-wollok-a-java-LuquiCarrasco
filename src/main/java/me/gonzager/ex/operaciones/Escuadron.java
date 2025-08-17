@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Escuadron {
-    public List<Drones> escuadron = new ArrayList<>();
+    private List<Drones> escuadron = new ArrayList<>();
     
     public Boolean escuadronAvanzado(){
         return escuadron.stream().anyMatch(d -> d.esAvanzado());
@@ -25,4 +25,10 @@ public class Escuadron {
             System.out.println("Supera la cantidad máxima definida por la ciudad.");
         }
     }
+
+    public List<Drones> getEscuadron() {
+        return escuadron;
+    }
+
+    
 }

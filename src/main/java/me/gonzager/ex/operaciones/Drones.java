@@ -8,7 +8,7 @@ public abstract class Drones {
     protected Double autonomia;
     private Integer nivelProcesamiento;
     private Mision mision;
-    public List<Sensor> sensores = new ArrayList<>();
+    List<Sensor> sensores = new ArrayList<>();
     
     public Drones(Double autonomia, Integer nivelProcesamiento, Mision mision) {
         this.autonomia = autonomia;
@@ -41,9 +41,9 @@ public abstract class Drones {
 
     public void añadirSensor(Sensor sensor) {
         if (this.mision instanceof Vigilancia) {
-        sensores.add(sensor);
+            sensores.add(sensor);
     } else {
-        System.out.println("No se pueden agregar sensores si la misión no es vigilancia.");
+            System.out.println("No se pueden agregar sensores si la misión no es vigilancia.");
         }
     }
 
@@ -73,4 +73,9 @@ public abstract class Drones {
         this.autonomia = this.autonomia - 2;
     }
 
+    public List<Sensor> getSensores() {
+        return sensores;
+    }
+
+    
 }

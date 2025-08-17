@@ -17,7 +17,7 @@ public class Zona {
         return operacionesRecibidas;
     }
 
-    private boolean puedeOperarSobreLaZona(Escuadron unEscuadron) {
+    private Boolean puedeOperarSobreLaZona(Escuadron unEscuadron) {
         return unEscuadron.escuadronAvanzado() && unEscuadron.capacidadOperativaTotal() > this.getTamañoTotal();
     }
 
@@ -25,7 +25,7 @@ public class Zona {
         this.operacionesRecibidas += 1;
     }
 
-    private void operacionSobreZona(Escuadron unEscuadron){
+    public void operacionSobreZona(Escuadron unEscuadron){
         if (this.puedeOperarSobreLaZona(unEscuadron)){
             this.sumarOperacion();
             unEscuadron.desgasteOperacion();
